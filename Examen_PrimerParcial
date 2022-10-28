@@ -1,0 +1,78 @@
+def Triangulo(n):
+    
+    # Outer loop for rows
+    for i in range(1,n+1):
+        
+        # Inner loop for columns
+        for j in range(1,2*n):
+            
+            # Conditions for creating the pattern
+            if i==n or i+j==n+1 or j-i==n-1:
+                print(i, end=" ")
+            else:
+                print(end="  ")
+        print()
+
+
+def Triangulo_1(n):
+    
+    # Outer loop for rows
+    for i in range(1,n+1):
+        
+        # Inner loop for columns
+        for j in range(i):
+            print ("", end="")    
+
+            # Conditions for creating the pattern
+        for k in range(2*(n-i)-1):
+            if k==0 or k==2*(n-i-1) or i==0:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+
+def Triangulo_2(n):
+    
+    # Outer loop for rows
+    for i in range(1,n+1):
+        
+        # Inner loop for columns
+        for j in range(i+10):
+            print ("", end="")    
+
+            # Conditions for creating the pattern
+        for k in range(2*(n-i)-1):
+            if k==0 or k==2*(n-i-1) or i==0:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+
+def Triangulo_Inverso(n):
+    
+    # Loop over number of rows and columns
+    for i in range(n):
+        
+        # Spaces across rows
+        for j in range(i):
+            print(" ", end="")
+            
+        # Conditions for creating the pattern
+        for k in range(2*(n-i)-1):
+            if k==0 or k==2*(n-i-1) or i==0:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+        
+
+Triangulo_Inverso(9)
+Triangulo(9)
+Triangulo_1(9)
+Triangulo(9)
+Triangulo_1(9)
+
+#print [cv2.flip Triangulo(9), cv2.flip Triangulo_1(9)]
+#DIRECCION HITHUB: https://github.com/Fernan1920/FLD_SIS420.git
